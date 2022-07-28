@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    background: #333;
+    z-index: 40;
+    position: relative;
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+
+.container {
+    padding: 18px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 70%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header__logo {
+    color: #fff;
+    padding: 0 15px;
+    border-right: 1px solid #fff;
+}
+
+.header__currency {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+    width: 100%;
+}
+
+.header__currency--wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.header__currency--name {
+    color: #fff;
+    font-size: 15px;
+}
+
+.header__currency--cost {
+    color: #fff;
+    font-size: 35px;
+}
+
+.main {
+    padding-top: 200px;
+}
+
+.main .container {
+    max-width: 50%;
+}
+
+.main__wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+}
+
+.main__container {
+    border: 1px solid #e0e1e5;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main__inputs {
+    background: transparent;
+    width: 200px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 100px 80px;
+    border-radius: 4px;
+}
+
+input,
+select {
+    background: none;
+    border: 0;
+    color: #333;
+}
+
+input {
+    padding-left: 10px;
+}
+
+select {
+    padding: 15px;
+}
+
+.main__image {
+    fill: currentColor;
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.main__title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+@media(max-width:1067px) {
+    .main .container {
+        max-width: 70%;
+    }
+    .header__logo {
+        font-size: 1.5em;
+    }
+    .header__currency--cost {
+        font-size: 25px;
+    }
+}
+
+@media(max-width:916px) {
+    .header__currency {
+        max-width: 200px;
+    }
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media(max-width:768px) {
+    .container {
+        max-width: 100% !important;
+    }
+    .header .container {
+        flex-direction: column;
+    }
+    .header__logo {
+        border: none;
+        margin-bottom: 20px;
+    }
+    .main {
+        padding-top: 40px;
+    }
+}
+
+@media(max-width:550px) {
+    .main__container {
+        flex-direction: column;
+    }
+    .main__image {
+        transform: rotate(90deg);
+    }
+}
